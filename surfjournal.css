@@ -1,0 +1,424 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+
+
+h1 {
+  font-family: 'helvetica';
+}
+
+
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#myjournal {
+  background-color: #fcfcb8;
+}
+
+#newentry {
+  background-color: #fcfcb8;
+}
+
+
+#register {
+  background-image: url('./ppoint.jpg');
+  background-position: top;
+  background-size: cover; /* or contain depending on what you want */
+}
+
+
+#loginpage {
+  background-image: url('./aptos.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; /* or contain depending on what you want */
+  text-align: center;
+}
+
+#readentry {
+  background-color: #fcfcb8;
+}
+
+#entry {
+  width: 55%;
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+}
+
+#entryconditions {
+  width: 25%;
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+}
+
+.centertext {
+  text-align: center;
+}
+
+.pintopright {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+
+
+#sup {
+  position: absolute;
+  top: 10vh;
+  left: 25vw;
+}
+
+#news {
+  position: absolute;
+  /*
+  top: 40vh;
+  left: 35vw;*/
+}
+
+
+
+
+
+#drseuss {
+  margin-left: 50px;
+}
+
+#yew {
+  position: absolute;
+  top: 50vh;
+  right: 10vw;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
+}
+
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  font-size: 21px;
+  background: #f6f6f6;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  #loginpage {
+    background-image: url('./mobileaptos.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; /* or contain depending on what you want */
+    text-align: center;
+  }
+
+  #register {
+    background-image: url('./mobileppoint.jpg');
+    background-position: top;
+    background-size: cover; /* or contain depending on what you want */
+  }
+
+  #newspeep {
+    display: none;
+  }
+
+  #news {
+    display: none;
+  }
+
+  #peep {
+    display: none;
+  }
+
+  #entrypic {
+    height: 100px;
+    width: 100px;
+  }
+
+  #howwasthesesh {
+    width: 50%;
+    background-color: grey;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+  }
+
+  #profilepic {
+    display: inline;
+    height: 100;
+    width: 100;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #fcfcb8;
+  }
+
+  #index {
+    text-align: center;
+  }
+
+  .rotatenegative {
+    display: none;
+  }
+
+  .rotatepositive {
+    display: none;
+  }
+
+  #quote {
+    display: none;
+  }
+
+  #login {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: medium;;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    font-family: 'helvetica';
+  }
+
+  #journalheader {
+    position: absolute;
+    width: 25;
+    font-size: 12px;
+    background-color: grey;
+    display: inline-table;
+    left: 70%;
+    transform:translateX(-75%);
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .myButton {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  	background-color:#ffffff;
+  	-moz-border-radius:6px;
+  	-webkit-border-radius:6px;
+  	border-radius:6px;
+  	border:1px solid #dcdcdc;
+  	cursor:pointer;
+  	color:#666666;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:6px 24px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #ffffff;
+  }
+  .myButton:hover {
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+  	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+  	background-color:#f6f6f6;
+  }
+  .myButton:active {
+  	position:relative;
+  	top:1px;
+  }
+
+  #job {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: thin;
+  }
+
+
+}
+
+@media (min-width: 768px) {
+
+  #newspeep {
+    position: relative;
+    left: 35vw;
+    bottom: 25vw;
+  }
+
+  #peep {
+    position: absolute;
+    left: 4vw;
+    z-index: -1;
+  }
+
+  #entrypic {
+    height: 250px;
+    width: 250px;
+  }
+
+  #howwasthesesh {
+    width: 25%;
+    background-color: grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+  }
+
+
+  #profilepic {
+    display: inline;
+    height: 200;
+    width: 200;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #fcfcb8;
+  }
+
+  #job {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: thin;
+  }
+
+  .rotatenegative {
+    -ms-transform: rotate(-25deg); /* IE 9 */
+    -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+  }
+
+  .rotatepositive {
+    -ms-transform: rotate(25deg); /* IE 9 */
+    -webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
+    transform: rotate(25deg);
+  }
+
+  #quote {
+    font-family: "Brush Script MT", cursive;
+    position: absolute;
+    top: 20vh;
+    right: 2vw;
+  }
+
+  #login {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: medium;
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    font-family: 'helvetica';
+  }
+
+  #journalheader {
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 25%;
+    background-color: grey;
+    display: inline;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .myButton {
+  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  	background-color:#ffffff;
+  	-moz-border-radius:6px;
+  	-webkit-border-radius:6px;
+  	border-radius:6px;
+  	border:1px solid #dcdcdc;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#666666;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:6px 24px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #ffffff;
+  }
+  .myButton:hover {
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+  	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+  	background-color:#f6f6f6;
+  }
+  .myButton:active {
+  	position:relative;
+  	top:1px;
+  }
+
+
+}

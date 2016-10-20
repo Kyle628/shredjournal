@@ -1,0 +1,33 @@
+home=pagina de inicio
+
+about=informacion
+
+furniture=muebleria
+
+hours=horas
+
+contact=contactar
+
+homemade furniture since 1985 = muebleria hecho en casa desde 1985
+
+custom furniture = muebleria personalizado
+
+get quality... = compra muebleria personalizada a su gusto. Contactenos para empezar su orden. Lo que usted guste, nosotros lo hacemos
+
+wooden furniture = muebleria de madera
+
+wooden furniture...= especializamos en muebleria de madera. Hecho de madera fina, nuestra muebleria se mira bien y esta hecha para durar.
+
+competitive prices = precios competitivos
+
+competitive prices...= nuestros precios son los mas baratos que van a encontrar en esta cuidad, pero la calidad esta fina. No van a encontrar una mejor oferta en otro lugar.
+
+upholstery = sillas y sofas
+
+upholstery...= nuestros sofas y silla son comodos y se miran bien en casa. Tenemos una seleccion grande de sofas y silla hechos de materiales finos.
+
+our story = nuestra estoria
+
+immigrating...= Nacido en Ayutla Jalisco Mexico, Gorgonio Anaya vino a los Estados Unidos a la edad de 16 con el sueno de una vida mejor para su familia. Empezo su sueno recogiendo frutas y vegetables en los campos de Milpitas, Ca, llendo puerta a puerta tratando de soportar a su familia. Anos despues su esfuertos se vieron recompensados y habrio su propia tienda, Muebleria Ayutla en 1985. Operada por la familia Anaya, ha estado en la misma locacion mas de 30 anos.
+
+customer feedback = 
