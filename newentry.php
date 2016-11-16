@@ -14,9 +14,32 @@ require('connect.php');
 
 <?php
 $user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM db.seaweed";
+$result = $conn->query($sql) or trigger_error($conn->error."[$sql]");
+$seaweed_spots = array();
+while ($row = $result->fetch_array()) {
+  $seaweed_spot = $row;
+  array_push($seaweed_spots, $seaweed_spot);
+}
+
 ?>
 
 <h1 id="howwasthesesh" class="centertext">How Was The Sesh?</h1>
+
+<h2>Get Conditions From:</h1>
+  <select id="seaweed_select" name="seaweed_spot">
+    <?php
+    foreach ($seaweed_spots as $a_spot) {
+      $spot_name = $a_spot['spot'];
+      $seaweed_id = $a_spot['spot_id'];
+      echo "<option value=$seaweed_id>$spot_name</option>";
+    }
+    ?>
+  </select>
+  <?php
+    echo "<script>var spot_id = document.getElementById('seaweed_select').value;</script>";
+    ?>
+  <button>Autofill</button>
 
 <?php echo '<br /><a class="mybutton" href="myjournal.php' . SID . '">Back To My Journal</a>'; ?>
 <br><br>

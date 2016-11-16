@@ -1,4 +1,5 @@
 <?php
+require('connect.php');
 function curl($url) {
         $ch = curl_init();  // Initialising cURL
         curl_setopt($ch, CURLOPT_URL, $url);    // Setting cURL's URL option with the $url variable passed into the function
@@ -17,12 +18,13 @@ function scrape_between($data, $start, $end){
     }
 
 $i = 1;
-for ($i; $i < 1594; $i++) {
+$all_spots = 1594;
+for ($i; $i < 20; $i++) {
 
-if ($i == 17 or $i == 148 or $i == 149 or $i == 150 or $i == 151 or $i == 152
+/*if ($i == 17 or $i == 148 or $i == 149 or $i == 150 or $i == 151 or $i == 152
 or $i == 153 or $i == 154) {
   continue;
-}
+}*/
 
 
 $url = "http://magicseaweed.com/Les-Huttes-Surf-Report/" . strval($i);
@@ -32,11 +34,24 @@ $scraped_website = curl($url);
 
 $spot = scrape_between($scraped_website, '<title>', 'Surf');
 
-if ($spot[0] == 4) {
+if ($spot[0] == '4') {
   continue;
 }
+$spot = strtolower($spot);
 echo $spot;
 echo " " . $i . "<br>";
+
+
+
+$sql = "insert into db.seaweed (spot_id, spot) values ('$i',
+'$spot')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "stored ";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
 
 }
 ?>

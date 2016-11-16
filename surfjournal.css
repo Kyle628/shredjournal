@@ -8,6 +8,37 @@ h1 {
   font-family: 'helvetica';
 }
 
+#navlist {
+  list-style-type: none;
+  margin-top: 0px;
+  padding: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.navelement {
+  position: relative;
+  top: 15px;
+  display: inline;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.navelement a {
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.navelement:hover {
+  background-color: #555;
+  color: white;
+}
+
 
 .imgcenter {
   display: block;
@@ -26,7 +57,7 @@ h1 {
 
 
 #register {
-  background-image: url('./ppoint.jpg');
+  background-image: url('./ppointblack.jpg');
   background-position: top;
   background-size: cover; /* or contain depending on what you want */
 }
@@ -97,22 +128,22 @@ h1 {
   right: 10vw;
 }
 
-ul {
+#entrylist {
   list-style-type: none;
   margin: 0;
   padding: 10;
 }
 
-li {
+#entry_li {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
 
-li:last-child {
+#entry_li:last-child {
   border: none;
 }
 
-li a {
+#entry_li a {
   text-decoration: none;
   color: #000;
   display: block;
@@ -125,7 +156,7 @@ li a {
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
-li a:hover {
+#entry_li a:hover {
   font-size: 21px;
   background: #f6f6f6;
 }
@@ -325,6 +356,21 @@ li a:hover {
     border-radius: 15px;
     border-color: #fcfcb8;
   }
+
+  #whosejournal {
+    margin: auto;
+
+  }
+
+  #current_name {
+    display: inline;
+  }
+
+  #journal {
+    display: inline;
+  }
+
+
 
   #job {
     display: block;

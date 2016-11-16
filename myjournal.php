@@ -49,7 +49,7 @@ wind_speed, tide_height, tide FROM db.entries WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 
 
-echo '<ul>';
+echo '<ul id="entrylist">';
 while($row = $result->fetch_array())
   {
   $entry = $row['entry'];
@@ -75,7 +75,7 @@ while($row = $result->fetch_array())
     '&tide_height=' . $row['tide_height'] .
     '&tide=' . $row['tide'] . '">' . $date .
      $sub_entry . '</a>';*/
-     echo '<li><a href="readentry.php?entry_id=' . $entry_id . '">' . $date . $sub_entry . '</a></li>';
+     echo '<li id="entry_li"><a href="readentry.php?entry_id=' . $entry_id . '">' . $date . $sub_entry . '</a></li>';
    }
   //echo '<br />';
   }
