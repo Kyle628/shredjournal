@@ -9,6 +9,7 @@ require('connect.php');
 
 <head>
 <link href="./surfjournal.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 
@@ -28,6 +29,7 @@ while ($row = $result->fetch_array()) {
 
 <h2>Get Conditions From:</h1>
   <select id="seaweed_select" name="seaweed_spot">
+    <option value=""></option>
     <?php
     foreach ($seaweed_spots as $a_spot) {
       $spot_name = $a_spot['spot'];
@@ -76,32 +78,6 @@ while ($row = $result->fetch_array()) {
     echo '<option value="' . $row['board'] . '">' . $row['board'] . '</option></br>';
   }
   echo '</select><a href="addboard.html">+</a><br><br>';
-  /*
-  $request =  'http://api.surfline.com/v1/forecasts/4211?resources=surf&days=1&getAllSpots=false&units=e&usenearshore=true&interpolate=true&showOptimal=true&callback=';
-  $response  = file_get_contents($request);
-  $jsonobj  = json_decode($response);
-  if (empty($jsonobj)) {
-    echo 'empty';
-  }
-  for($i = 0; $i < count($jsonobj); $i++){
-    $key = $i;
-    $val = $jsonobj[$i];
-    for($j = 0; $j < count($val); $j++){
-        $sub_key = $j;
-        $sub_val = $val[$j];
-        echo $sub_key;
-    }
-}
-  echo('<ul ID="resultList">');
-  foreach($jsonobj->SearchResponse->Image->Results as $value)
-{
-echo('<li class="resultlistitem"><a href="' . $value->Url . '">');
-echo('<img src="' . $value->Thumbnail->Url. '"></li>');
-
-}
-echo("</ul>");
-
-*/
 
 
   ?>
@@ -110,12 +86,12 @@ echo("</ul>");
   Date:
   <input id="date" type="date" name="date">
   Size:
-  <select name="size">
+  <select id = "size" name="size">
     <option value=""></option>
     <option value="ankleknee">Ankle-Knee</option>
     <option value="kneechest">Knee-Chest</option>
-    <option value="ankleknee">Overhead</option>
-    <option value="ankleknee">Double Overhead+</option>
+    <option value="overhead">Overhead</option>
+    <option value="doubleoverhead">Double Overhead+</option>
   </select><br><br>
   Surface Conditions:
   <select name="surface_conditions">
@@ -194,6 +170,26 @@ echo("</ul>");
 
 <script>
 document.getElementById('date').valueAsDate = new Date();
+var report;
+$.get("./surfline.php",function(json) {
+  report = JSON.parse(json)
+  console.log(report);
+  var reported_height = parseInt(report['max_height']);
+  if (reported_height < 4) {
+    $('#size option[value="ankleknee"]').prop('selected', true);
+  } else if (reported_height < 7) {
+    $('#size option[value="kneechest"]').prop('selected', true);
+  } else if (reported_height < 10) {
+    $('size').val('overhead');
+    $('#size option[value="overhead"]').prop('selected', true);
+  } else {
+    $('#size option[value="doubleoverhead"]').prop('selected', true);
+  }
+  console.log(reported_height);
+});
+
+
+
 </script>
 
 </body>
