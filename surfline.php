@@ -1,7 +1,7 @@
 <?php
 require('connect.php');
 
-$request = "http://api.surfline.com/v1/forecasts/4190?resources=surf,tide,wind&days=1";
+$request = "http://api.surfline.com/v1/forecasts/4190?resources=id,surf,tide,wind&days=1";
 $response  = file_get_contents($request);
 $json  = json_decode($response);
 
@@ -13,16 +13,24 @@ $swell_direction = $json->Surf->swell_direction1[0][0];
 $swell_period = $json->Surf->swell_period1[0][0];
 $wind_direction = $json->Wind->wind_direction[0][0];
 $wind_speed = $json->Wind->wind_speed[0][0];
-$high_tide;
+
+$high_tides = [];
+$low_tides = [];
+$num_low_tides = 0;
+$num_high_tides = 0;
 foreach ($tides as $tide) {
-  if ($tide->type == "High") {
-    $high_tide = $tide->Rawtime;
-  }
+  if ($tide->type == "High" && $num_high_tides < 2) {
+    array_push($high_tides, $tide->Rawtime);
+    $num_high_tides += 1;
+} else if ($tide->type == "Low" && $num_low_tides < 2) {
+    array_push($low_tides, $tide->Rawtime);
+    $num_low_tides += 1;
+}
 }
 
 $report = array('max_height' => $max_height, 'swell_direction' => $swell_direction,
  'swell_period' => $swell_period, 'wind_direction' => $wind_direction, 'wind_speed' => $wind_speed,
-'high_tide' => $high_tide);
+'high_tides' => $high_tides, 'low_tides' => $low_tides);
 echo json_encode($report);
 //header('Content-Type: application/json');
 //echo $response;
