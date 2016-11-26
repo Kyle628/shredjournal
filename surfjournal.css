@@ -161,6 +161,12 @@ h1 {
   background: #f6f6f6;
 }
 
+#back_to_journal {
+    position: relative;
+    left: 900px;
+    bottom: 200px;
+}
+
 
 
 
@@ -289,6 +295,8 @@ h1 {
   	text-decoration:none;
   	text-shadow:0px 1px 0px #ffffff;
   }
+
+
   .myButton:hover {
   	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
   	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);

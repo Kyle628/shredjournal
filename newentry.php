@@ -15,37 +15,42 @@ require('connect.php');
 
 <?php
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM db.seaweed";
+$sql = "SELECT * FROM db.surfline";
 $result = $conn->query($sql) or trigger_error($conn->error."[$sql]");
-$seaweed_spots = array();
+$surfline_spots = array();
 while ($row = $result->fetch_array()) {
-  $seaweed_spot = $row;
-  array_push($seaweed_spots, $seaweed_spot);
+  $surfline_spot = $row;
+  array_push($surfline_spots, $surfline_spot);
 }
 
 ?>
 
 <h1 id="howwasthesesh" class="centertext">How Was The Sesh?</h1>
 
-<h2>Get Conditions From:</h1>
-  <select id="seaweed_select" name="seaweed_spot">
+
+<script>console.log(document.getElementById('time').value);</script>
+
+Where did you surf? (just start typing)
+  <select id="surfline_select" name="surfline_spot">
     <option value=""></option>
     <?php
-    foreach ($seaweed_spots as $a_spot) {
+    foreach ($surfline_spots as $a_spot) {
       $spot_name = $a_spot['spot'];
-      $seaweed_id = $a_spot['spot_id'];
-      echo "<option value=$seaweed_id>$spot_name</option>";
-    }
+      $surfline_id = $a_spot['spot_id'];
+      echo "<option value=$surfline_id>$spot_name</option>";
+  }
     ?>
-  </select>
+</select>
   <?php
-    echo "<script>var spot_id = document.getElementById('seaweed_select').value;</script>";
+    echo "<script>var spot_id = document.getElementById('surfline_select').value;</script>";
     ?>
-  <button id="autofill">Autofill</button>
-
-<?php echo '<br /><a class="mybutton" href="myjournal.php' . SID . '">Back To My Journal</a>'; ?>
-<br><br>
+  <button id="autofill">Autofill Conditions</button>
+<?php echo '<br /><a id="back_to_journal" class="mybutton" href="myjournal.php' . SID . '">Back To My Journal</a>'; ?>
+<div style="width: 500px; height: 2px; background-color: black;"></div>
+<br>
 <form action="submitentry.php" method="post" enctype="multipart/form-data" id="entryform">
+    What time did you surf?
+    <input id ="time" type="time" name="time" value="17:20:00"><br><br>
   Rate The Session (1-10):
   <select name="rating">
     <option value=""></option>
@@ -63,7 +68,7 @@ while ($row = $result->fetch_array()) {
   <?php
   $sql = "SELECT spot FROM db.spots WHERE user_id = '$user_id'";
   $result = $conn->query($sql);
-  echo 'Spot: <select name="spot">';
+  echo 'Spot: <select id = "spot" name="spot">';
   echo '<option value=""></option>';
   while($row = $result->fetch_array()) {
     echo '<option value="' . $row['spot'] . '">' . $row['spot'] . '</option></br>';
@@ -81,8 +86,6 @@ while ($row = $result->fetch_array()) {
 
 
   ?>
-  Time:
-  <input id ="time" type="time" name="time" value="17:20:00"><br><br>
   Date:
   <input id="date" type="date" name="date">
   Size:
@@ -186,7 +189,9 @@ while ($row = $result->fetch_array()) {
 document.getElementById('date').valueAsDate = new Date();
 var report;
 $('#autofill').click(function() {
-    $.get("./surfline.php",function(json) {
+    console.log("./surfline.php/spot_id=" + document.getElementById('surfline_select').value);
+    $('#spot').append('<option value>' + $('#surfline_select option:selected').text() + '</option>');
+    $.get("./surfline.php/?spot_id=" + document.getElementById('surfline_select').value,function(json) {
       report = JSON.parse(json)
       console.log(report);
       // check surf height and autofill size select form
