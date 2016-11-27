@@ -1,3 +1,10 @@
+<nav>
+  <ul id="navlist">
+    <li class="navelement"><a href="./index.html">Home</a></li>
+    <li class="navelement"><a href="contact.asp">Contact</a></li>
+  </ul>
+</nav>
+
 <?php
 session_start();
 require('connect.php');
@@ -37,7 +44,7 @@ if (empty($profilepic)) {
 $username = ucfirst($_SESSION['username']);
 
 echo '<div id="journalheader">';
-echo '<h1 class="centertext">' . $username . "'s Journal</h1>";
+echo '<h1 class="centertext" style="font-family: cursive;">' . $username . "'s Journal</h1>";
 echo '</div><br><br><br><br><br>';
 
 $user_id = $_SESSION['user_id'];
@@ -83,7 +90,7 @@ echo '</ul>';
 
 echo '<br /><a class="myButton" href="newentry.php' . SID . '">Add a New Entry</a>';
 ?>
-<br><a class="pintopright" href="logout.php">logout</a>
+<!--<br><a class="pintopright" href="logout.php">logout</a>-->
 
 </body>
 </html>

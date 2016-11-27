@@ -1,0 +1,39 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<link href="./surfjournal.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<nav>
+  <ul id="navlist">
+    <li class="navelement"><a href="./index.html">Home</a></li>
+    <li class="navelement"><a href="contact.asp">Contact</a></li>
+  </ul>
+</nav>
+
+<body id="index">
+
+
+<img src="bluesurfstick.gif" height=200 width =300></img><br /><br>
+
+<div id="buttons" style="position: relative; left: 300px;z-index: 1;">
+<a class="mybutton" href="register.php">Start A New Journal</a>
+
+<a class="mybutton" href="login.php">Continue Journaling</a><br><br>
+</div>
+
+<img id = "splat" style="z-index: 0; left : 300px;bottom: 200px;" src="./splat.jpg">
+
+</body>
+
+<div class="app">
+  <div class="water"></div>
+</div>
+<script>
+$('.water').css('width', $('body').width()*2);
+$('.water').css('height', $('body').width()*2);
+</script>
+</html>

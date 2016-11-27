@@ -4,6 +4,57 @@ body, html{
 }
 
 
+body {
+  overflow:hidden;
+}
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin:0;
+  background-color:white;
+}
+
+.water {
+      position: absolute;
+      background-color:#00E8FF;
+      z-index: 1;
+      width: 800px;
+      height: 800px;
+
+
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+
+      transition: all 0.5s ease !important;
+      -webkit-transition: all 0.5s ease !important;
+
+      top: 90%;
+      left: 0;
+      border: 1px solid transparent;
+      border-radius: 40% !important;
+
+  animation-name: spin;
+       animation-duration: 8s;
+       animation-iteration-count: infinite;
+       animation-timing-function: linear;
+    }
+
+#splat {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    bottom: 300px;
+    left: 700px;
+}
+
 h1 {
   font-family: 'helvetica';
 }
@@ -48,7 +99,9 @@ h1 {
 
 
 #myjournal {
-  background-color: #fcfcb8;
+  background-image: url('white_to_black.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 #newentry {
@@ -57,7 +110,7 @@ h1 {
 
 
 #register {
-  background-image: url('./ppointblack.jpg');
+  background-image: url('./ppointblackblue.jpg');
   background-position: top;
   background-size: cover; /* or contain depending on what you want */
 }
@@ -72,7 +125,10 @@ h1 {
 }
 
 #readentry {
-  background-color: #fcfcb8;
+    background-image: url('./surfer.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #entry {
@@ -172,6 +228,7 @@ h1 {
 
 @media (max-width: 768px) {
 
+
   #loginpage {
     background-image: url('./mobileaptos.jpg');
     background-position: center;
@@ -257,7 +314,7 @@ h1 {
     position: absolute;
     width: 25;
     font-size: 12px;
-    background-color: grey;
+    background-color: black;
     display: inline-table;
     left: 70%;
     transform:translateX(-75%);
@@ -285,7 +342,9 @@ h1 {
   	-moz-border-radius:6px;
   	-webkit-border-radius:6px;
   	border-radius:6px;
-  	border:1px solid #dcdcdc;
+  	border:2px solid #dcdcdc;
+    border-color: #00E8FF;
+    border-width: 20px;
   	cursor:pointer;
   	color:#666666;
   	font-family:Arial;
@@ -367,6 +426,7 @@ h1 {
 
   #whosejournal {
     margin: auto;
+    text-align: center;
 
   }
 
@@ -425,7 +485,7 @@ h1 {
     left: 50%;
     transform:translateX(-50%);
     width: 25%;
-    background-color: grey;
+    background-color: black;
     display: inline;
     border-style: solid;
     border-color: black;
@@ -448,7 +508,7 @@ h1 {
   	-moz-border-radius:6px;
   	-webkit-border-radius:6px;
   	border-radius:6px;
-  	border:1px solid #dcdcdc;
+  	border:1px solid #00E8FF;
   	display:inline-block;
   	cursor:pointer;
   	color:#666666;

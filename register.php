@@ -15,9 +15,7 @@
 <img id="job" src="whoisjob.jpeg">
 -->
 
-<h1 "whosejournal">Whose Journal is this?</h1>
-
-<h2 id="current_name">Kelly</h2><h2 id="journal">'s Journal</h2>
+<h1 "whosejournal" class="centertext">Whose Journal is this?</h1>
 
 <form class="centertext" action="processregister.php" method="post">
    Create Username:<br>
