@@ -5,7 +5,15 @@ require('connect.php');
 
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body id="newentry">
+
+<nav>
+  <ul id="navlist">
+    <li class="navelement"><a href="./index.html">Home</a></li>
+    <li class="navelement"><a href="contact.asp">Contact</a></li>
+  </ul>
+</nav>
+
+<body id="newentrywhite">
 
 <head>
 <link href="./surfjournal.css" rel="stylesheet">
@@ -44,13 +52,14 @@ Where did you surf? (just start typing)
   <?php
     echo "<script>var spot_id = document.getElementById('surfline_select').value;</script>";
     ?>
-  <button id="autofill">Autofill Conditions</button>
+
 <?php echo '<br /><a id="back_to_journal" class="mybutton" href="myjournal.php' . SID . '">Back To My Journal</a>'; ?>
-<div style="width: 500px; height: 2px; background-color: black;"></div>
-<br>
 <form action="submitentry.php" method="post" enctype="multipart/form-data" id="entryform">
     What time did you surf?
-    <input id ="time" type="time" name="time" value="17:20:00"><br><br>
+    <input id ="time" type="time" name="time" value="17:20:00">
+    <button type="button" id="autofill">Autofill Conditions</button><br><br>
+    <div style="width: 500px; height: 2px; background-color: black;"></div>
+    <br>
   Rate The Session (1-10):
   <select name="rating">
     <option value=""></option>
@@ -174,8 +183,14 @@ Where did you surf? (just start typing)
     <option value="outgoing">outgoing</option>
   </select><br><br>
 
+  <div style="width: 500px; height: 2px; background-color: black;"></div>
+  <br>
+
   <label>Upload A Photo!</label><br/>
   <input name="uploadpic" type="file" class="inputFile" accept="image/*" /><br>
+
+  <br>
+  <br>
 
   <textarea name="entry" form="entryform" rows="20" cols="75"></textarea>
   <input type="submit" href="myjournal.php"/><br>
@@ -183,7 +198,7 @@ Where did you surf? (just start typing)
 
 </form>
 
-<br><a class="pintopright" href="logout.php">logout</a>
+<!--<br><a class="pintopright" href="logout.php">logout</a>-->
 
 <script>
 document.getElementById('date').valueAsDate = new Date();

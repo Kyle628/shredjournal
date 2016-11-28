@@ -4,7 +4,7 @@ body, html{
 }
 
 
-body {
+#index {
   overflow:hidden;
 }
 @keyframes spin{
@@ -17,7 +17,7 @@ body {
   }
 }
 
-body {
+#index {
   margin:0;
   background-color:white;
 }
@@ -104,8 +104,8 @@ h1 {
   background-size: cover;
 }
 
-#newentry {
-  background-color: #fcfcb8;
+#newentrywhite {
+  background-color: white;
 }
 
 
@@ -117,7 +117,7 @@ h1 {
 
 
 #loginpage {
-  background-image: url('./aptos.jpg');
+  background-image: url('./aptosblack.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover; /* or contain depending on what you want */
@@ -135,14 +135,14 @@ h1 {
   width: 55%;
   border-style: solid;
   border-width: thin;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #entryconditions {
   width: 25%;
   border-style: solid;
   border-width: thin;
-  background-color: white;
+  background-color: rgba(255,255,255,.5);
 }
 
 .centertext {
@@ -219,8 +219,13 @@ h1 {
 
 #back_to_journal {
     position: relative;
-    left: 900px;
-    bottom: 200px;
+    left: 800px;
+}
+
+#autofill {
+    background-color: #50a4fb;
+    border-width: 1px;
+    border-color: black;
 }
 
 
@@ -262,7 +267,7 @@ h1 {
 
   #howwasthesesh {
     width: 50%;
-    background-color: grey;
+    background-color: black;
     display: table;
     margin-left: auto;
     margin-right: auto;
@@ -297,7 +302,7 @@ h1 {
     display: none;
   }
 
-  #login {
+  /*#login {
     border-style: solid;
     border-radius: 5px;
     border-width: medium;;
@@ -308,7 +313,7 @@ h1 {
     text-align: center;
     background-color: white;
     font-family: 'helvetica';
-  }
+  }*/
 
   #journalheader {
     position: absolute;
@@ -322,6 +327,37 @@ h1 {
     border-color: black;
     border-radius: 10px;
     color: white;
+  }
+
+  .myButtonBlue {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  	background-color:#ffffff;
+  	-moz-border-radius:6px;
+  	-webkit-border-radius:6px;
+  	border-radius:6px;
+  	border:2px solid #dcdcdc;
+    border-color: #00E8FF;
+    border-width: 20px;
+  	cursor:pointer;
+  	color:#666666;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:6px 24px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #ffffff;
   }
 
   .myButton {
@@ -343,8 +379,8 @@ h1 {
   	-webkit-border-radius:6px;
   	border-radius:6px;
   	border:2px solid #dcdcdc;
-    border-color: #00E8FF;
-    border-width: 20px;
+    border-color: black;
+    border-width: 1px;
   	cursor:pointer;
   	color:#666666;
   	font-family:Arial;
@@ -404,7 +440,7 @@ h1 {
 
   #howwasthesesh {
     width: 25%;
-    background-color: grey;
+    background-color: black;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -467,7 +503,7 @@ h1 {
     right: 2vw;
   }
 
-  #login {
+  /*#login {
     border-style: solid;
     border-radius: 5px;
     border-width: medium;
@@ -478,7 +514,7 @@ h1 {
     text-align: center;
     background-color: white;
     font-family: 'helvetica';
-  }
+  }*/
 
   #journalheader {
     position: absolute;
@@ -494,6 +530,32 @@ h1 {
   }
 
   .myButton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+    background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+    background-color:#ffffff;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+  }
+  .myButtonBlue {
   	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   	box-shadow:inset 0px 1px 0px 0px #ffffff;
