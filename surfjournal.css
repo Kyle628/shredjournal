@@ -126,7 +126,7 @@ h1 {
 
 #readentry {
     background-image: url('./surfer.jpg');
-    background-position: bottom;
+    background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -283,7 +283,7 @@ h1 {
     width: 100;
     border-style: solid;
     border-radius: 10px;
-    border-color: #fcfcb8;
+    border-color: white;
   }
 
   #index {

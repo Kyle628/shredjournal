@@ -21,7 +21,7 @@ if (empty($profilepic)) {
   echo '<a href="./addprofilepic.php">Add a Profile Picture</a>';
 } else {
 
-  echo "<img id='profilepic' src='./profilepics/" . $user_id . "'>";
+  echo "<a href='./addprofilepic.php'><img id='profilepic' src='./profilepics/" . $user_id . "'></a>";
 }
 
 

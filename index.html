@@ -4,40 +4,61 @@
 
 <head>
 <link href="./surfjournal.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>
-    <li class="navelement"><a href="contact.asp">Contact</a></li>
+    <li class="navelement"><a type="button" data-toggle="modal" data-target="#contactModal">Contact</a></li>
   </ul>
 </nav>
 
 <body id="index">
 
 
-<img src="surfstick.gif" height=200 width =300></img><br /><br>
+<img src="bluesurfstick.gif" height=200 width =300></img><br /><br>
 
-<a class="mybutton" href="register.php">Start A New Journal</a><br /><br />
+<div id="buttons" style="position: relative; left: 300px;z-index: 1;">
+<a class="mybutton" href="register.php">Start A New Journal</a>
 
 <a class="mybutton" href="login.php">Continue Journaling</a><br><br>
-
-<img class="rotatenegative" src="deardiary.png" height=200 width =300></img><br />
-
-<img id="sup" class="rotatepositive" src="sup.png" height=200 width =300></img><br />
-
-<div id="newspeep">
-<img id="news" class="rotatenegative" src="news.png" style="border-style: solid; border-width: 1px;border-radius: 5px;" height=350 width =200></img><br />
-<img id="peep" src="peep.gif"></img>
 </div>
 
-<div id="quote">
-<h2>"Sometimes you will never know the value of a moment <br> until it becomes a memory."</h2>
-<h2 id="drseuss">- Dr. Seuss</h2>
-</div>
-
-<img id="yew" class="rotatenegative" src="yew.png" height=200 width =300></img><br />
-
+<img id = "splat" style="z-index: 0; left : 300px;bottom: 200px;" src="./splat.jpg">
 
 </body>
+
+
+<div class="app">
+  <div class="water"></div>
+</div>
+<script>
+$('.water').css('width', $('body').width()*2);
+$('.water').css('height', $('body').width()*2);
+</script>
 </html>
+
+<!-- Modal -->
+<div id="contactModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Contact Me</h4>
+      </div>
+      <div class="modal-body">
+        <p>kyjoconn@gmail.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
