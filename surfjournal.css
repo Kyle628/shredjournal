@@ -228,11 +228,39 @@ h1 {
     border-color: black;
 }
 
+#indexbuttons {
+    position: relative;
+    left: 300px;
+    z-index: 1;
+}
+
 
 
 
 @media (max-width: 768px) {
+  #indexbuttons {
+        left: 0;
+        display: inline-block;
+  }
 
+  #startbutton {
+      display: block;
+      margin-bottom: 20px;
+
+  }
+
+  #splat {
+      display: none;
+  }
+
+  #continuebutton {
+      display: block;
+
+  }
+
+  .water {
+      display: none;
+  }
 
   #loginpage {
     background-image: url('./mobileaptos.jpg');
