@@ -18,40 +18,37 @@ require('connect.php');
 <head>
 <link href="./surfjournal.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 
 <?php
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM db.surfline";
-$result = $conn->query($sql) or trigger_error($conn->error."[$sql]");
-$surfline_spots = array();
-while ($row = $result->fetch_array()) {
-  $surfline_spot = $row;
-  array_push($surfline_spots, $surfline_spot);
-}
 
 ?>
 
 <h1 id="howwasthesesh" class="centertext">How Was The Sesh?</h1>
 
 
-<script>console.log(document.getElementById('time').value);</script>
-
 Where did you surf? (just start typing)
-  <select id="surfline_select" name="surfline_spot">
-    <option value=""></option>
-    <?php
-    foreach ($surfline_spots as $a_spot) {
-      $spot_name = $a_spot['spot'];
-      $surfline_id = $a_spot['spot_id'];
-      echo "<option value=$surfline_id>$spot_name</option>";
-  }
-    ?>
-</select>
-  <?php
-    echo "<script>var spot_id = document.getElementById('surfline_select').value;</script>";
-    ?>
+<input id="surfline_select_id">
+<input id="surfline_select" name="surfline_spot">
+<script>
+$(function() {
+    $( "#surfline_select" ).autocomplete({
+        source: 'autocomplete.php',
+        select: function (event, ui) {
+        event.preventDefault();
+        $("#surfline_select").val(ui.item.label); // display the selected text
+        $("#surfline_select_id").val(ui.item.value); // save selected id to hidden input
+    }
+    });
+});
+</script>
+
+
+
 
 <?php echo '<br /><a id="back_to_journal" class="mybutton" href="myjournal.php' . SID . '">Back To My Journal</a>'; ?>
 <form action="submitentry.php" method="post" enctype="multipart/form-data" id="entryform">
@@ -200,15 +197,15 @@ Where did you surf? (just start typing)
 
 <!--<br><a class="pintopright" href="logout.php">logout</a>-->
 
+
 <script>
+
 document.getElementById('date').valueAsDate = new Date();
 var report;
 $('#autofill').click(function() {
-    console.log("./surfline.php/spot_id=" + document.getElementById('surfline_select').value);
     $('#spot').append('<option value>' + $('#surfline_select option:selected').text() + '</option>');
-    $.get("./surfline.php/?spot_id=" + document.getElementById('surfline_select').value,function(json) {
+    $.get("./surfline.php/?spot_id=" + document.getElementById('surfline_select_id').value,function(json) {
       report = JSON.parse(json)
-      console.log(report);
       // check surf height and autofill size select form
       var reported_height = parseInt(report['max_height']);
       if (reported_height < 4) {
@@ -283,10 +280,6 @@ $('#autofill').click(function() {
     var time_of_entry = parseInt(document.getElementById('time').value);
     //var time_difference = Math.abs(reported_high_tide - time_of_entry);
 
-    console.log(reported_high_tide1);
-    console.log(reported_high_tide2);
-    console.log(reported_low_tide1);
-    console.log(reported_low_tide2);
 
     if (Math.abs(reported_high_tide1 - time_of_entry) <= 2 ||
         Math.abs(reported_high_tide2 - time_of_entry) <= 2)
