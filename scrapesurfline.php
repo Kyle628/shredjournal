@@ -1,16 +1,7 @@
 <?php
 require('connect.php');
-/*$request = "http://api.surfline.com/v1/forecasts/18001?resources=id";
-$response  = file_get_contents($request);
-$json  = json_decode($response);
 
-$spot_name = $json->name;
-$spot_id = $json->id;
-
-echo $spot_name;
-echo $spot_id;*/
-
-for ($i = 2; $i < 18000; $i += 1) {
+for ($i = 2; $i < 1000; $i += 1) {
 
     $request = "http://api.surfline.com/v1/forecasts/$i?resources=id,surf";
     $response  = file_get_contents($request);

@@ -1,3 +1,8 @@
+<?php
+session_start();
+require('connect.php');
+?>
+
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>
@@ -6,8 +11,6 @@
 </nav>
 
 <?php
-session_start();
-require('connect.php');
 
 $user_id = $_SESSION['user_id'];
 
