@@ -37,13 +37,14 @@ $entry_id = $_GET['entry_id'];
 
 $sql = "SELECT entry, spot, time, date,
 size, surface_conditions, swell_direction, swell_period, wind_direction,
-wind_speed, tide_height, tide, entrypic FROM db.entries WHERE entry_id = '$entry_id'";
+wind_speed, tide_height, tide, entrypic, board FROM db.entries WHERE entry_id = '$entry_id'";
 $result = $conn->query($sql);
 
 $row = $result->fetch_array();
 
 $entry = $row['entry'];
 $spot = $row['spot'];
+$board = $row['board'];
 $time = $row['time'];
 $date = $row['date'];
 $size = $row['size'];
@@ -60,6 +61,10 @@ $entrypic = $row['entrypic'];
 
 if ($spot !== '') {
   echo '<b>Spot: </b>' . $spot;
+  echo '<br /><br />';
+}
+if ($board !== '') {
+  echo '<b>Board: </b>' . $board;
   echo '<br /><br />';
 }
 if ($time !== '') {

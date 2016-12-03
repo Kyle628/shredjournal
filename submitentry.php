@@ -6,6 +6,7 @@ $user_id = $_SESSION['user_id'];
 $entry = $conn->real_escape_string($_POST['entry']);
 $entry = htmlspecialchars($entry);
 $spot = $_POST['spot'];
+$board = $_POST['board'];
 $time = $_POST['time'];
 $date = $_POST['date'];
 
@@ -55,10 +56,10 @@ if(is_uploaded_file($_FILES['uploadpic']['tmp_name'])) {
 
   $sql = "insert into db.entries (user_id, entry, spot, time, date,
   size, surface_conditions, swell_direction, swell_period, wind_direction,
-  wind_speed, tide_height, tide) values ('$user_id', '$entry', '$spot',
+  wind_speed, tide_height, tide, board) values ('$user_id', '$entry', '$spot',
   '$time', '$date', '$size', '$surface_conditions', '$swell_direction',
   '$swell_period', '$wind_direction', '$wind_speed', '$tide_height',
-  '$tide')";
+  '$tide', '$board')";
 
   $conn->query($sql) or trigger_error($conn->error."[$sql]");
 

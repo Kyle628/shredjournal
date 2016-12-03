@@ -3,6 +3,18 @@ session_start();
 require('connect.php');
 ?>
 
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="./surfjournal.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>
@@ -21,24 +33,38 @@ $row = $result->fetch_array();
 $profilepic = $row['profilepic'];
 
 if (empty($profilepic)) {
-  echo '<a href="./addprofilepic.php">Add a Profile Picture</a>';
+  echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#profileModal">Open Modal</button>';
 } else {
 
-  echo "<a href='./addprofilepic.php'><img id='profilepic' src='./profilepics/" . $user_id . "'></a>";
+  echo "<a data-toggle='modal' data-target='#profileModal'><img id='profilepic' src='./profilepics/" . $user_id . "'></a>";
 }
 
 
-
 ?>
+<!-- Modal -->
+<div id="profileModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Upload a Picture</h4>
+      </div>
+      <div class="modal-body">
+          <form action="uploadimage.php" method="post" enctype="multipart/form-data">
+              <input type="file" name="uploadpic" id="uploadpic" accept="image/*"/>
+              <br>
+              <input type="submit" name="submit" class="btn-primary" style="border-style: solid; border-color: white; border-radius: 5px;">
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
 
-<!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<head>
-<link href="./surfjournal.css" rel="stylesheet">
-</head>
+  </div>
+</div>
 
 
 <body id="myjournal">
@@ -96,4 +122,5 @@ echo '<br /><a class="myButton" href="newentry.php' . SID . '">Add a New Entry</
 <!--<br><a class="pintopright" href="logout.php">logout</a>-->
 
 </body>
+
 </html>

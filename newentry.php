@@ -20,6 +20,9 @@ require('connect.php');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 
 
@@ -32,7 +35,7 @@ $user_id = $_SESSION['user_id'];
 
 
 Where did you surf? (just start typing)
-<input id="surfline_select_id">
+<input id="surfline_select_id" type="hidden">
 <input id="surfline_select" name="surfline_spot">
 <script>
 $(function() {
@@ -41,6 +44,7 @@ $(function() {
         select: function (event, ui) {
         event.preventDefault();
         $("#surfline_select").val(ui.item.label); // display the selected text
+        $("#spot").val(ui.item.label); // display the selected text
         $("#surfline_select_id").val(ui.item.value); // save selected id to hidden input
     }
     });
@@ -54,44 +58,14 @@ $(function() {
 <form action="submitentry.php" method="post" enctype="multipart/form-data" id="entryform">
     What time did you surf?
     <input id ="time" type="time" name="time" value="17:20:00">
-    <button type="button" id="autofill">Autofill Conditions</button><br><br>
+    <button type="button" id="autofill" class="btn-info" style="color: black;">Autofill Conditions</button><br><br>
     <div style="width: 500px; height: 2px; background-color: black;"></div>
     <br>
-  Rate The Session (1-10):
-  <select name="rating">
-    <option value=""></option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-  </select><br><br>
-  <?php
-  $sql = "SELECT spot FROM db.spots WHERE user_id = '$user_id'";
-  $result = $conn->query($sql);
-  echo 'Spot: <select id = "spot" name="spot">';
-  echo '<option value=""></option>';
-  while($row = $result->fetch_array()) {
-    echo '<option value="' . $row['spot'] . '">' . $row['spot'] . '</option></br>';
-  }
-  echo '</select><a href="addspot.html">+</a><br><br>';
-  //
-  $sql = "SELECT board FROM db.boards WHERE user_id = '$user_id'";
-  $result = $conn->query($sql);
-  echo 'Board: <select name="board">';
-  echo '<option value=""></option>';
-  while($row = $result->fetch_array()) {
-    echo '<option value="' . $row['board'] . '">' . $row['board'] . '</option></br>';
-  }
-  echo '</select><a href="addboard.html">+</a><br><br>';
 
-
-  ?>
+  Spot:
+  <input id="spot" name="spot"><br><br>
+  Board:
+  <input id="board" name="board"><br><br>
   Date:
   <input id="date" type="date" name="date">
   Size:
@@ -190,7 +164,7 @@ $(function() {
   <br>
 
   <textarea name="entry" form="entryform" rows="20" cols="75"></textarea>
-  <input type="submit" href="myjournal.php"/><br>
+  <input type="submit" class="btn-lg btn-primary" value="Submit Journal Entry" href="myjournal.php"/><br>
 
 
 </form>
@@ -203,7 +177,7 @@ $(function() {
 document.getElementById('date').valueAsDate = new Date();
 var report;
 $('#autofill').click(function() {
-    $('#spot').append('<option value>' + $('#surfline_select option:selected').text() + '</option>');
+    //$('#spot').append('<option value>' + $('#surfline_select option:selected').text() + '</option>');
     $.get("./surfline.php/?spot_id=" + document.getElementById('surfline_select_id').value,function(json) {
       report = JSON.parse(json)
       // check surf height and autofill size select form
@@ -312,5 +286,29 @@ $('#autofill').click(function() {
 </script>
 
 </body>
+<!-- Modal -->
+<div id="addspotModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Upload a Picture</h4>
+      </div>
+      <div class="modal-body">
+          <form action="addspot.php" method="post">
+            Add a Spot:<br>
+            <input type="text" name="spot"/>
+            <input type="submit"/>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </html>
