@@ -34,7 +34,7 @@ $row = $result->fetch_array();
 $profilepic = $row['profilepic'];
 
 if (empty($profilepic)) {
-  echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#profileModal">Open Modal</button>';
+  echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#profileModal">Add Photo+</button>';
 } else {
 
   echo "<a data-toggle='modal' data-target='#profileModal'><img id='profilepic' src='./profilepics/" . $user_id . "'></a>";
