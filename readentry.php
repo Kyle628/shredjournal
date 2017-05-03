@@ -16,6 +16,7 @@ require('connect.php');
 
 </head>
 
+<a href="#" id="logo"></a>
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>

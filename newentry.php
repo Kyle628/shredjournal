@@ -6,6 +6,7 @@ require('connect.php');
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<a href="#" id="logo"></a>
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>
@@ -59,7 +60,7 @@ $(function() {
     What time did you surf?
     <input id ="time" type="time" name="time" value="17:20:00">
     <button type="button" id="autofill" class="btn-info" style="color: black;">Autofill Conditions</button><br><br>
-    <div style="width: 500px; height: 2px; background-color: black;"></div>
+    <div style="width: 60%; height: 2px; background-color: black;"></div>
     <br>
 
   Spot:
@@ -154,7 +155,7 @@ $(function() {
     <option value="outgoing">outgoing</option>
   </select><br><br>
 
-  <div style="width: 500px; height: 2px; background-color: black;"></div>
+  <div style="width: 60%; height: 2px; background-color: black;"></div>
   <br>
 
   <label>Upload A Photo!</label><br/>
@@ -163,8 +164,8 @@ $(function() {
   <br>
   <br>
 
-  <textarea name="entry" form="entryform" rows="20" cols="75"></textarea>
-  <input type="submit" class="btn-lg btn-primary" value="Submit Journal Entry" href="myjournal.php"/><br>
+  <textarea name="entry" form="entryform" rows="10" cols="50"></textarea>
+  <input type="submit" id="autofill" value="Submit Entry" href="myjournal.php"/><br>
 
 
 </form>

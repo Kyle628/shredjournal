@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g id="Layer_1">
+	<path fill="#0097C1" stroke="#000000" stroke-miterlimit="10" d="M36.052,109.872c0,0-28.601,0-29.07,18.755
+		c-0.469,18.755,29.07,10.784,29.07,10.784s15.473-5.158,15.473,12.191c0,17.348-39.854,12.191-39.854,12.191l0.938,9.846
+		c0,0,55.328,1.406,50.639-22.975c-4.689-24.382-27.994-22.038-27.994-22.038s-13.104,8.842-16.549-2.344
+		c-3.444-11.186,16.549-7.502,16.549-7.502L36.052,109.872z"/>
+</g>
+<g id="Layer_2">
+	<path fill="#465A65" stroke="#000000" stroke-miterlimit="10" d="M45.398,111.754v60.017h10.315v-22.037
+		c0,0,0.938-12.191,6.564-12.191s6.095,11.722,6.095,11.722v22.507h9.378v-22.037c0,0,0-23.914-16.177-23.914h-6.33v-14.066H45.398z
+		"/>
+</g>
+<g id="Layer_3">
+	<path fill="#44C8F5" stroke="#000000" stroke-miterlimit="10" d="M63.53,125.059v46.904h10.315v-46.904
+		c0,0,19.224-17.349,19.224,9.847h9.377c0,0-6.564-39.975-28.602-15.299l-0.938-8.043H63.53V125.059z"/>
+</g>
+<g id="Layer_4">
+	<path fill="#3E7C94" stroke="#000000" stroke-miterlimit="10" d="M88.488,157.244h13.832c0,0,3.282-20.163-13.832-20.163
+		c-17.114,0-13.832,20.163-13.832,20.163H74.53c0,0,0.505,16.41,27.917,16.41v-8.206H88.488V157.244z M88.614,142.122
+		c8.557,0,6.916,10.081,6.916,10.081H81.699C81.699,152.203,80.058,142.122,88.614,142.122z"/>
+</g>
+<g id="Layer_5">
+	<path fill="#8ED8F8" stroke="#020202" stroke-miterlimit="10" d="M109.432,113.404v32.346c0,0-13.598-7.034-13.598,11.268
+		c0,18.301,27.195,16.594,27.195,16.594v-60.207H109.432z M109.432,166.85c0,0-7.971-2.346-8.44-9.832s8.44-5.172,8.44-5.172V166.85
+		z"/>
+	<rect x="123.029" y="109.872" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.982"/>
+	<rect x="123.029" y="120.854" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.982"/>
+	<rect x="123.029" y="131.835" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.982"/>
+	<rect x="123.029" y="142.817" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.982"/>
+	<rect x="123.029" y="153.8" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.981"/>
+	<rect x="123.029" y="164.781" fill="#FAF185" stroke="#020202" stroke-miterlimit="10" width="167.332" height="10.982"/>
+	<rect x="126.552" y="123.25" fill="none" width="218.497" height="64.237"/>
+	<text transform="matrix(1 0 0 1 126.5518 168.2441)" font-family="'Noteworthy-Light'" font-size="52.7488">Journal</text>
+</g>
+</svg>

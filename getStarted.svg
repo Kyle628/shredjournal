@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<g id="Layer_1">
+	<path fill="#FFFFFF" d="M469.711,775.52c0,0,168.28,82.422,169.997-381.207S484.307,13.107,484.307,13.107
+		S365.033,52.584,364.965,380.576C364.895,722.287,469.711,775.52,469.711,775.52z"/>
+	<rect x="357.858" y="73.383" fill="none" width="116.557" height="477.404"/>
+	
+		<text transform="matrix(1 0 0 1 463.8706 73.3833)" font-family="'BrushScriptMT'" font-size="39.9167" glyph-orientation-vertical="0" writing-mode="tb">WaveStorm</text>
+</g>
+<g id="Layer_2">
+	<path fill="#BAE5F3" stroke="#000000" stroke-miterlimit="10" d="M435.031,57.703l-4.83,669.5c0,0-8.247-13.586-14.065-23.557
+		c-2.858-4.898,0.71-619.985,0.71-619.985S426.094,64.674,435.031,57.703z"/>
+	<path fill="#BAE5F3" stroke="#000000" stroke-miterlimit="10" d="M435.031,57.703l-4.83,669.5c0,0-8.247-13.586-14.065-23.557"/>
+	<path fill="#BAE5F3" stroke="#000000" stroke-miterlimit="10" d="M416.136,703.646c5.819,9.971,14.065,23.557,14.065,23.557
+		l4.83-669.5"/>
+	<polygon fill="#B4E4FA" stroke="#000000" stroke-miterlimit="10" points="584.472,57.703 584.472,719.902 600.175,686.504 
+		597.187,82.361 	"/>
+	<path fill="#B4E4FA" stroke="#000000" stroke-miterlimit="10" d="M415.027,91.818"/>
+</g>
+<g id="Layer_3">
+	<path fill="#21409A" stroke="#000000" stroke-miterlimit="10" d="M415.027,91.818c0,0-43.675,56.608-50.062,276.948
+		c-6.387,220.34,51.171,334.88,51.171,334.88L415.027,91.818z"/>
+	<path fill="#21409A" d="M597.187,82.361c0,0,47.134,118.985,42.536,273.632c-4.599,154.647-6.91,295.384-39.548,330.511
+		L597.187,82.361z"/>
+	<rect x="275.078" y="797.846" fill="none" width="687.068" height="180.019"/>
+	<text transform="matrix(1 0 0 1 275.0781 883.1455)" fill="#FFFFFF" font-family="'Noteworthy-Light'" font-size="100">Get Started</text>
+</g>
+</svg>

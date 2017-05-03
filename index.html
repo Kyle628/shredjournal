@@ -13,37 +13,24 @@
 
 </head>
 
+<a href="#" id="logo"></a>
 <nav>
   <ul id="navlist">
-    <li class="navelement"><a href="./index.html">Home</a></li>
-    <li class="navelement"><a type="button" data-toggle="modal" data-target="#contactModal">Contact</button></li>
+    <a href="./index.html"><li class="navelement">Home</li></a>
+    <a type="button" data-toggle="modal" data-target="#contactModal"><li class="navelement">Contact</li></a>
   </ul>
 </nav>
 
 <body id="index">
 
+<div id="img_container">
+<a class="mybutton" href="register.php"><img src="getStarted.svg" height="200" width ="200"></img></a>
 
-<img src="bluesurfstick.gif" height=200 width =300></img><br /><br>
-
-<div id="indexbuttons">
-<a id ="startbutton" class="mybutton" href="register.php">Start A New Journal</a>
-
-<a id ="continuebutton" class="mybutton" href="login.php">Continue Journaling</a><br><br>
+<a class="mybutton" href="login.php"><img src="fish.svg" height="200" width = "200"></a><br><br>
 </div>
-
-<img id = "splat" style="z-index: 0;bottom: 200px;" src="./splat.jpg">
 
 </body>
 
-
-<div class="app">
-    <!-- I got this water animation from codepen -->
-  <div class="water"></div>
-</div>
-<script>
-$('.water').css('width', $('body').width()*2);
-$('.water').css('height', $('body').width()*2);
-</script>
 </html>
 
 <!-- Modal -->
@@ -57,6 +44,7 @@ $('.water').css('height', $('body').width()*2);
         <h4 class="modal-title">Contact Me</h4>
       </div>
       <div class="modal-body">
+        <a href="http://kyjoconn.com">Kyle O'Connor</a>
         <p>kyjoconn@gmail.com</p>
       </div>
       <div class="modal-footer">

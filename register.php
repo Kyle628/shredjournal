@@ -13,6 +13,7 @@
 
 </head>
 
+<a href="#" id="logo"></a>
 <nav>
   <ul id="navlist">
     <li class="navelement"><a href="./index.html">Home</a></li>
@@ -34,7 +35,7 @@
    <?php echo '<span style="color: red;">' . $_GET['usernameerror'] . '</span>'?><br>
    Create Password:<br>
    <input type="password" name="password" maxlength="15"/><br><br>
-   <input class= "mybutton" type="submit"/>
+   <input type="submit"/>
 </form>
 
 </body>

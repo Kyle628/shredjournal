@@ -17,6 +17,7 @@ require('connect.php');
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
+<a href="#" id="logo"></a>
 <nav>
   <ul id="navlist" style="text-align: left;">
     <li class="navelement"><a href="./index.html">Home</a></li>

@@ -1,12 +1,38 @@
+
+
 body, html{
     margin:0;
     padding:0;
+    width: 100%;
+    background-color: #5ddcea;
 }
 
+#autofill {
+    color: white !important;
+    background-color: black;
+    border: none;
+}
+
+#logo {
+    display: none;
+    float: right;
+    height: 100px;
+    width: 300px;
+    background: url(shredlogo.svg) no-repeat center;
+    margin: -50px, 0, 0, 0;
+}
+
+#img_container {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 410px;
+}
 
 #index {
-  overflow:hidden;
+  overflow: hidden;
+  background-color: #5ddcea;
 }
+
 @keyframes spin{
   from {
     transform: rotate(0deg);
@@ -19,45 +45,16 @@ body, html{
 
 #index {
   margin:0;
-  background-color:white;
+  background-color: #5ddcea;
 }
 
-.water {
-      position: absolute;
-      background-color:#00E8FF;
-      z-index: 1;
-      width: 800px;
-      height: 800px;
-
-
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
-
-      transition: all 0.5s ease !important;
-      -webkit-transition: all 0.5s ease !important;
-
-      top: 90%;
-      left: 0;
-      border: 1px solid transparent;
-      border-radius: 40% !important;
-
-  animation-name: spin;
-       animation-duration: 8s;
-       animation-iteration-count: infinite;
-       animation-timing-function: linear;
-    }
-
-#splat {
-    display: block;
-    height: 400px;
-    width: 400px;
-    position: relative;
-    bottom: 300px;
-    margin: 0 auto;
-}
 
 h1 {
   font-family: 'helvetica';
+}
+
+nav {
+    width: 100%;
 }
 
 #navlist {
@@ -100,36 +97,26 @@ h1 {
 
 
 #myjournal {
-  background-image: url('white_to_black.jpg');
-  background-position: center;
-  background-size: cover;
+  background-color: #5ddcea;
 }
 
 #newentrywhite {
-  background-color: white;
+  background-color: #5ddcea;
 }
 
 
 #register {
-  background-image: url('./ppointblackblue.jpg');
-  background-position: top;
-  background-size: cover; /* or contain depending on what you want */
+  background-color: #5ddcea;
 }
 
 
 #loginpage {
-  background-image: url('./aptosblack.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover; /* or contain depending on what you want */
+  background-color: #5ddcea;
   text-align: center;
 }
 
 #readentry {
-    background-image: url('./surfer.jpg');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #5ddcea;
 }
 
 #entry {
@@ -170,10 +157,6 @@ h1 {
   top: 40vh;
   left: 35vw;*/
 }
-
-
-
-
 
 #drseuss {
   margin-left: 50px;
@@ -223,31 +206,26 @@ h1 {
     left: 800px;
 }
 
-
-#indexbuttons {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 395px;
-    z-index: 1;
-}
-
-#startbutton {
-
-}
-
-
-
-
 @media (max-width: 768px) {
+  #back_to_journal {
+        position: relative;
+        left: 200px;
+  }
+
+  textarea {
+      ;
+  }
+
   #indexbuttons {
-        left: 0;
+        margin: 0 auto;
         display: inline-block;
+        width: 275px;
   }
 
   #startbutton {
       display: block;
       margin-bottom: 20px;
+      width: 225px;
 
   }
 
@@ -257,6 +235,7 @@ h1 {
 
   #continuebutton {
       display: block;
+      width: 225px;
 
   }
 
@@ -265,17 +244,12 @@ h1 {
   }
 
   #loginpage {
-    background-image: url('./mobileaptos.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover; /* or contain depending on what you want */
+    background-color: #5ddcea;
     text-align: center;
   }
 
   #register {
-    background-image: url('./mobileppoint.jpg');
-    background-position: top;
-    background-size: cover; /* or contain depending on what you want */
+    background-color:  #5ddcea;
   }
 
   #newspeep {
@@ -332,18 +306,6 @@ h1 {
     display: none;
   }
 
-  /*#login {
-    border-style: solid;
-    border-radius: 5px;
-    border-width: medium;;
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-color: white;
-    font-family: 'helvetica';
-  }*/
 
   #journalheader {
     position: absolute;
@@ -359,83 +321,7 @@ h1 {
     color: white;
   }
 
-  .myButtonBlue {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-  	background-color:#ffffff;
-  	-moz-border-radius:6px;
-  	-webkit-border-radius:6px;
-  	border-radius:6px;
-  	border:2px solid #dcdcdc;
-    border-color: #00E8FF;
-    border-width: 20px;
-  	cursor:pointer;
-  	color:#666666;
-  	font-family:Arial;
-  	font-size:15px;
-  	font-weight:bold;
-  	padding:6px 24px;
-  	text-decoration:none;
-  	text-shadow:0px 1px 0px #ffffff;
-  }
 
-  .myButton {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-  	background-color:#ffffff;
-  	-moz-border-radius:6px;
-  	-webkit-border-radius:6px;
-  	border-radius:6px;
-  	border:2px solid #dcdcdc;
-    border-color: black;
-    border-width: 1px;
-  	cursor:pointer;
-  	color:#666666;
-  	font-family:Arial;
-  	font-size:15px;
-  	font-weight:bold;
-  	padding:6px 24px;
-  	text-decoration:none;
-  	text-shadow:0px 1px 0px #ffffff;
-  }
-
-
-  .myButton:hover {
-  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
-  	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-  	background-color:#f6f6f6;
-  }
-  .myButton:active {
-  	position:relative;
-  	top:1px;
-  }
 
   #job {
     display: block;
@@ -450,6 +336,10 @@ h1 {
 }
 
 @media (min-width: 768px) {
+
+    #logo {
+        display: block;
+    }
 
   #newspeep {
     position: relative;
@@ -493,6 +383,7 @@ h1 {
   #whosejournal {
     margin: auto;
     text-align: center;
+    color: white;
 
   }
 
@@ -533,18 +424,7 @@ h1 {
     right: 2vw;
   }
 
-  /*#login {
-    border-style: solid;
-    border-radius: 5px;
-    border-width: medium;
-    display: block;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-color: white;
-    font-family: 'helvetica';
-  }*/
+
 
   #journalheader {
     position: absolute;
@@ -557,73 +437,6 @@ h1 {
     border-color: black;
     border-radius: 10px;
     color: white;
-  }
-
-  .myButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-    background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-    background-color:#ffffff;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid black;
-    display:inline-block;
-    cursor:pointer;
-    color:#666666;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
-  }
-  .myButtonBlue {
-  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	box-shadow:inset 0px 1px 0px 0px #ffffff;
-  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-  	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-  	background-color:#ffffff;
-  	-moz-border-radius:6px;
-  	-webkit-border-radius:6px;
-  	border-radius:6px;
-  	border:1px solid #00E8FF;
-  	display:inline-block;
-  	cursor:pointer;
-  	color:#666666;
-  	font-family:Arial;
-  	font-size:15px;
-  	font-weight:bold;
-  	padding:6px 24px;
-  	text-decoration:none;
-  	text-shadow:0px 1px 0px #ffffff;
-  }
-  .myButton:hover {
-  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
-  	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-  	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-  	background-color:#f6f6f6;
-  }
-  .myButton:active {
-  	position:relative;
-  	top:1px;
   }
 
 
